@@ -45,6 +45,7 @@ h1 em{font-weight:400;color:var(--gold)}
 .fact span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-muted)}
 .fact b{font-family:var(--display);font-weight:700;font-size:17px}
 .fact b.tbc{color:var(--gold)}
+.fact a.maps{color:var(--gold);font-size:13px;font-weight:500;margin-top:2px}
 
 /* Tabs */
 .tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--bg);border-bottom:1px solid var(--line)}
@@ -78,6 +79,8 @@ section.qs{padding-top:30px;scroll-margin-top:70px}
 .chip{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--navy);padding:4px 10px;border-radius:3px}
 :root[data-theme="dark"] .chip{background:var(--gold);color:#1a1205}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chip{background:var(--gold);color:#1a1205}}
+.chip.hl,:root .chip.hl{background:var(--gold);color:#1a1205}
+section.qs.hl .list{border:2px solid var(--gold)}
 .why{color:var(--muted);font-size:14px;margin:0 0 8px;font-style:italic;font-family:var(--display)}
 .cue{font-size:14px;margin:0 0 10px;padding:8px 12px;background:var(--gold-soft);color:var(--fg)}
 .cue b{color:var(--gold-deep);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:11px;margin-right:6px}
@@ -145,9 +148,9 @@ footer{margin-top:40px;padding-block:16px 48px;border-top:1px solid var(--line);
     <h1>Anahita Bali <em>with April</em></h1>
     <p class="meta"><strong>Guest:</strong> April, owner of Anahita · Wellness resort residences in Babakan, Canggu</p>
     <div class="facts">
-      <div class="fact"><span>Dates</span><b>Sat 24 &amp; Sun 25 Oct</b></div>
-      <div class="fact"><span>Call time</span><b class="tbc">TBC</b></div>
-      <div class="fact"><span>Location</span><b class="tbc">TBC</b></div>
+      <div class="fact"><span>Date</span><b>Sat 24 Oct 2026</b></div>
+      <div class="fact"><span>Time</span><b>10:30 am</b></div>
+      <div class="fact"><span>Location</span><b>Anahita Villas, Jl. Pura Wates Canggu No.8</b><a class="maps" href="https://www.google.com/maps/dir//ANAHITA+VILLAS,+Jl.+Pura+Wates+Canggu+No.8,+Canggu,+Kuta+Utara,+Badung+Regency,+Bali+80363/@-8.6848886,115.16985,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2dd2398000c01873:0xb3df063aff8bc719!2m2!1d115.1530266!2d-8.6280238?entry=ttu&amp;g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Open in Google Maps</a></div>
       <div class="fact"><span>Crew</span><b>Host · Videographer</b></div>
     </div>
   </div>
@@ -179,7 +182,7 @@ footer{margin-top:40px;padding-block:16px 48px;border-top:1px solid var(--line);
 
   <div class="block">
     <h2>Wardrobe &amp; essentials</h2>
-    <p class="lede">Smart casual, the same on both days so footage cuts together.</p>
+    <p class="lede">Smart casual, consistent throughout so footage cuts together.</p>
     <div class="cards">
       <div class="card key"><span class="tag">Essential</span><h3>Belt</h3><p>Non-negotiable. Leather, brown or tan. It's what pulls the smart-casual look together on camera.</p>
         <ul class="dl"><li class="n">No shorts or trousers on camera without one</li><li class="n">Skip busy buckles or logos</li></ul></div>
@@ -221,7 +224,7 @@ footer{margin-top:40px;padding-block:16px 48px;border-top:1px solid var(--line);
       <div><span>Guaranteed return</span><b>8% a year for the first 2 years, subject to programme terms</b></div>
       <div><span>Owner perks</span><b>21 complimentary resort points a year</b></div>
       <div><span>Payment</span><b>Flexible payment plans</b></div>
-      <div><span>Management</span><b>Professional hospitality operator</b></div>
+      <div><span>Management</span><b>Swiss-Belhotel International, under the Swiss-Belresort brand. The only Swiss-Belresort in Canggu.</b></div>
     </div>
     <p class="lede"><a href="https://internationalpropertyalerts.com/property/canggu-wellness-resort-residences/" target="_blank" rel="noopener">View the full Anahita development listing on IPA</a></p>
   </div>
@@ -232,7 +235,7 @@ footer{margin-top:40px;padding-block:16px 48px;border-top:1px solid var(--line);
       <div class="card"><h3>Setting</h3><p>Beside a natural river and waterfall, surrounded by greenery and rice fields.</p></div>
       <div class="card"><h3>Wellness club</h3><p>Open 24 hours, with a spa, hydrotherapy pools, sauna, cold plunge and oxygen therapy.</p></div>
       <div class="card"><h3>In every suite</h3><p>Signature flower jacuzzi bath, open-plan living in natural materials, resort pool access.</p></div>
-      <div class="card"><h3>Dining</h3><p>On-site health-focused restaurant.</p></div>
+      <div class="card"><h3>Dining</h3><p>On-site health-focused restaurant, run under the Swiss-Belresort brand.</p></div>
     </div>
   </div>
 
@@ -294,9 +297,16 @@ const sections = [
     "Will the wellness club and restaurant be open to outside guests? How does that help owners?",
     "Suites come fully furnished. What's the interior style, and how did you choose the materials?",
     "Which smart-home and sustainability features are built in, and do they lower running costs for owners?",
-    "What does the hospitality operator handle day to day for owners, from cleaning to bookings to repairs?",
     "How does Anahita stand out from other new resort projects in Canggu?",
     "What's the one detail at Anahita that guests will still talk about after they leave?"]},
+  {t:"The Swiss-Belhotel partnership", p:true, hl:true, why:"Key highlight. Make clear why April chose Swiss-Belhotel and what it means for owners.", cue:"Managed under the Swiss-Belresort brand (Swiss-Belhotel International). The only Swiss-Belresort in Canggu.", q:[
+    "Why did you choose Swiss-Belhotel to run Anahita?",
+    "How did the partnership come about, and what made Swiss-Belhotel say yes to this project?",
+    "Anahita is the only Swiss-Belresort in Canggu. What does that mean for the project and for owners?",
+    "For an overseas buyer, what peace of mind does an international hotel brand bring?",
+    "How does the Swiss-Belhotel name help with bookings, guest reach and occupancy?",
+    "What does Swiss-Belhotel handle day to day for owners, from guests and cleaning to repairs and reports?",
+    "What standards does Swiss-Belhotel bring that a private villa manager can't?"]},
   {t:"Ownership, made simple", p:true, cue:"25-year leasehold, extendable by 25 years, transferable if you sell.", q:[
     "Why did you choose a leasehold structure, and why should a foreign buyer feel comfortable with it?",
     "At year 25, how does the extension work? Is the price or process agreed in the contract today?",
@@ -329,10 +339,15 @@ const sections = [
     "How have new rules on permits and villa rentals changed things for buyers?",
     "How have buyers changed? Are they getting younger?",
     "What's one mistake you made that you'd warn others about?"]},
-  {t:"Why IPA", p:true, why:"The turn to confidence: buying abroad is safer with the right partners.", q:[
+  {t:"Working with Alex and IPA", p:true, hl:true, why:"Testimonial. Let April speak about Alex, IPA's marketing and the sales funnel in her own words.", q:[
     "Why did you choose to work with International Property Alerts?",
+    "What has it been like working with Alex and the IPA team?",
+    "How has IPA's marketing helped put Anahita in front of international buyers?",
+    "Walk us through IPA's sales funnel from your side. How do enquiries come in, and how are they followed up?",
+    "What results have you seen since partnering with IPA?",
     "What does IPA do for buyers that's hard to do alone from overseas?",
-    "How do you and IPA work together to make the process feel clear and safe?",
+    "What would you tell another developer who is thinking about working with IPA?",
+    "In one sentence, how would you describe working with Alex and IPA?",
     "For someone watching who's curious but still nervous, what's the very first step?"]},
   {t:"Close", p:true, q:[
     "If your best friend asked, \"Should I buy in Bali?\", what would you tell them?",
@@ -397,8 +412,8 @@ let n=0;
 sections.forEach((s,i)=>{
   const id="s"+(i+1);
   const sec=document.createElement("section");
-  sec.className="qs"; sec.id=id; if(s.p) sec.dataset.priority="1";
-  sec.innerHTML=`<div class="sh"><h2>${esc(s.t)}</h2>${s.p?'<span class="chip">Priority</span>':''}</div>`+
+  sec.className="qs"+(s.hl?" hl":""); sec.id=id; if(s.p) sec.dataset.priority="1";
+  sec.innerHTML=`<div class="sh"><h2>${esc(s.t)}</h2>${s.hl?'<span class="chip hl">Highlight</span>':s.p?'<span class="chip">Priority</span>':''}</div>`+
     (s.why?`<p class="why">${esc(s.why)}</p>`:'')+(s.cue?`<p class="cue"><b>Host cue</b>${esc(s.cue)}</p>`:'');
   const ol=document.createElement("ol"); ol.className="list";
   s.q.forEach(q=>{n++; ol.appendChild(item("q"+n,esc(q)))});
