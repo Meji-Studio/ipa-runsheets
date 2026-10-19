@@ -1,0 +1,443 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Anahita Q&amp;A with April</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700&display=swap">
+<style>
+/* Layout: navy masthead with shoot details, sticky tab bar (Shoot / Questions / Property), one reading column per tab */
+:root{
+  --bg:#f7f8f9; --surface:#ffffff; --fg:#1f2733; --muted:#5b6675; --line:#dfe4ea;
+  --navy:#002349; --on-navy:#ffffff; --on-navy-muted:#c9d3df; --navy-line:#1d3d63;
+  --gold:#ce9335; --gold-deep:#b1773a; --gold-soft:#f6eddc; --hover:#eef2f6;
+  --ok:#2f7d5b; --no:#b5473a; --done:#a7b0bb;
+  --display:"Merriweather", Georgia, "Times New Roman", serif;
+  --body:"Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0b1624; --surface:#112136; --fg:#e7ecf2; --muted:#9fadbf; --line:#203550;
+  --navy:#001a37; --on-navy:#ffffff; --on-navy-muted:#b7c4d4; --navy-line:#1b3657;
+  --gold:#d9a650; --gold-deep:#d9a650; --gold-soft:#2a2414; --hover:#16304d;
+  --ok:#6cc39a; --no:#e48a7c; --done:#56657a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b1624; --surface:#112136; --fg:#e7ecf2; --muted:#9fadbf; --line:#203550;
+  --navy:#001a37; --on-navy:#ffffff; --on-navy-muted:#b7c4d4; --navy-line:#1b3657;
+  --gold:#d9a650; --gold-deep:#d9a650; --gold-soft:#2a2414; --hover:#16304d;
+  --ok:#6cc39a; --no:#e48a7c; --done:#56657a; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55;margin:0}
+.wrap{max-width:820px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* Masthead */
+.band{background:var(--navy);color:var(--on-navy);border-bottom:4px solid var(--gold)}
+.head{display:grid;gap:12px;padding-block:32px 28px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,5.5vw,42px);line-height:1.2;margin:0;letter-spacing:.02em;text-wrap:balance}
+h1 em{font-weight:400;color:var(--gold)}
+.meta{color:var(--on-navy-muted);font-size:15px;margin:0}
+.meta strong{color:var(--on-navy);font-weight:500}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--navy-line);border:1px solid var(--navy-line);margin-top:8px}
+.fact{background:var(--navy);padding:12px 14px;display:grid;gap:2px;min-width:0}
+.fact span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-muted)}
+.fact b{font-family:var(--display);font-weight:700;font-size:17px}
+.fact b.tbc{color:var(--gold)}
+
+/* Tabs */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.tabrow{display:flex;gap:4px;overflow-x:auto}
+.tab{font:inherit;font-size:15px;font-weight:500;background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:14px 14px 11px;cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--gold)}
+.tab:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.panel{padding-block:8px 24px}
+
+/* Shared type */
+h2{font-family:var(--display);font-weight:700;font-size:22px;margin:0;line-height:1.3;color:var(--fg);text-wrap:balance}
+h2 .sn{color:var(--gold-deep)}
+h3{font-size:17px;font-weight:700;margin:0}
+.block{padding-top:32px;display:grid;gap:12px;scroll-margin-top:120px}
+.lede{color:var(--muted);margin:0;font-size:15px}
+.note{padding:14px 16px;background:var(--gold-soft);border-left:3px solid var(--gold);font-size:15px}
+.note b{color:var(--gold-deep)}
+.note ul{margin:6px 0 0;padding-left:18px;display:grid;gap:4px}
+
+/* Questions toolbar */
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-block:14px 4px}
+.bar select,.bar button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:4px;padding:8px 14px;cursor:pointer}
+.bar select{max-width:100%;min-width:0;flex:1 1 200px}
+.bar button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#1a1205}
+.bar button:focus-visible,.bar select:focus-visible,.q:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.count{font-size:13px;color:var(--muted);margin-left:auto;font-variant-numeric:tabular-nums}
+
+section.qs{padding-top:30px;scroll-margin-top:70px}
+.sh{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin-bottom:6px}
+.chip{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--navy);padding:4px 10px;border-radius:3px}
+:root[data-theme="dark"] .chip{background:var(--gold);color:#1a1205}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chip{background:var(--gold);color:#1a1205}}
+.why{color:var(--muted);font-size:14px;margin:0 0 8px;font-style:italic;font-family:var(--display)}
+.cue{font-size:14px;margin:0 0 10px;padding:8px 12px;background:var(--gold-soft);color:var(--fg)}
+.cue b{color:var(--gold-deep);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:11px;margin-right:6px}
+
+ol.list,ul.list{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:4px}
+.q{display:grid;grid-template-columns:48px 1fr 24px;gap:10px;align-items:start;padding:14px;cursor:pointer;border-top:1px solid var(--line)}
+.q:first-child{border-top:0}
+.q:hover{background:var(--hover)}
+.num{font-weight:700;color:var(--gold-deep);font-variant-numeric:tabular-nums;font-size:15px;padding-top:2px}
+.txt{min-width:0}
+.txt small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.tick{width:22px;height:22px;border:2px solid var(--line);border-radius:50%;margin-top:2px;display:grid;place-items:center}
+.q.done .txt,.q.done .num{color:var(--done);text-decoration:line-through}
+.q.done .tick{background:var(--gold);border-color:var(--gold)}
+.q.done .tick::after{content:"";width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.list .q{grid-template-columns:1fr 24px}
+body.priority section.qs:not([data-priority]){display:none}
+
+/* Cards (wardrobe, setup) */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:18px;display:grid;gap:8px;align-content:start;position:relative;min-width:0}
+.card.key{border:2px solid var(--gold)}
+.card .tag{position:absolute;top:-11px;right:14px;background:var(--gold);color:#1a1205;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:3px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.dl{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:15px}
+.dl li{display:grid;grid-template-columns:18px 1fr;gap:6px}
+.dl li::before{font-weight:700}
+.dl .y::before{content:"✓";color:var(--ok)}
+.dl .n::before{content:"✕";color:var(--no)}
+
+/* Schedule */
+.sched{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:4px;overflow:hidden;min-width:0}
+.day header{background:var(--navy);color:var(--on-navy);padding:12px 16px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline}
+.day header b{font-family:var(--display)}
+.day header span{font-size:13px;color:var(--gold)}
+.slots{list-style:none;margin:0;padding:6px 16px 12px}
+.slots li{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:15px}
+.slots li:first-child{border-top:0}
+.slots .t{color:var(--gold-deep);font-weight:700;font-variant-numeric:tabular-nums;font-size:13px;padding-top:2px}
+
+/* Table */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
+th,td{text-align:left;padding:10px 14px;border-top:1px solid var(--line)}
+thead th{border-top:0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--hover)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tbody tr.grp td{background:var(--gold-soft);font-weight:700;color:var(--gold-deep);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.kv div{background:var(--surface);padding:14px 16px;display:grid;gap:2px}
+.kv span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.kv b{font-size:16px;font-weight:500}
+
+a{color:var(--gold-deep)}
+footer{margin-top:40px;padding-block:16px 48px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media (max-width:480px){body{font-size:16px}.q{padding:12px 10px}.slots li{grid-template-columns:80px 1fr}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="band">
+  <div class="wrap head">
+    <span class="eyebrow">International Property Alerts · Shoot run sheet</span>
+    <h1>Anahita Bali <em>with April</em></h1>
+    <p class="meta"><strong>Guest:</strong> April, owner of Anahita · Wellness resort residences in Babakan, Canggu</p>
+    <div class="facts">
+      <div class="fact"><span>Dates</span><b>Sat 24 &amp; Sun 25 Oct</b></div>
+      <div class="fact"><span>Call time</span><b class="tbc">TBC</b></div>
+      <div class="fact"><span>Location</span><b class="tbc">TBC</b></div>
+      <div class="fact"><span>Crew</span><b>Host · Videographer</b></div>
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="wrap tabrow" role="tablist" aria-label="Run sheet sections">
+    <button class="tab" role="tab" id="tab-questions" aria-controls="questions" aria-selected="true">Questions</button>
+    <button class="tab" role="tab" id="tab-shoot" aria-controls="shoot" aria-selected="false">Shoot prep</button>
+    <button class="tab" role="tab" id="tab-property" aria-controls="property" aria-selected="false">Property facts</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- QUESTIONS -->
+<div class="panel" id="questions" role="tabpanel" aria-labelledby="tab-questions">
+  <div class="bar">
+    <select id="jump" aria-label="Jump to section"><option value="">Jump to section…</option></select>
+    <button id="prio" type="button" aria-pressed="false">Priority only</button>
+    <button id="reset" type="button">Clear ticks</button>
+    <span class="count" id="count"></span>
+  </div>
+  <div id="list"></div>
+</div>
+
+<!-- SHOOT PREP -->
+<div class="panel" id="shoot" role="tabpanel" aria-labelledby="tab-shoot" hidden>
+
+  <div class="block">
+    <h2>Wardrobe &amp; essentials</h2>
+    <p class="lede">Smart casual, the same on both days so footage cuts together.</p>
+    <div class="cards">
+      <div class="card key"><span class="tag">Essential</span><h3>Belt</h3><p>Non-negotiable. Leather, brown or tan. It's what pulls the smart-casual look together on camera.</p>
+        <ul class="dl"><li class="n">No shorts or trousers on camera without one</li><li class="n">Skip busy buckles or logos</li></ul></div>
+      <div class="card"><h3>Polo shirt</h3><p>Neutral colors only, tucked in.</p>
+        <ul class="dl"><li class="y">White, sand, stone grey, or olive</li><li class="n">No large logos or graphic prints</li></ul></div>
+      <div class="card"><h3>Bottoms</h3><p>Tailored chino shorts or trousers in neutral tones: sand, stone, or navy.</p>
+        <ul class="dl"><li class="y">Worn with the belt</li></ul></div>
+      <div class="card"><h3>Shoes</h3><p>Clean white sneakers.</p>
+        <ul class="dl"><li class="y">Freshly cleaned, no visible scuffs</li><li class="n">Skip chunky soles or bold branding</li></ul></div>
+    </div>
+    <div class="note"><b>The look:</b> smart casual throughout. Neutral polo tucked into belted chinos or shorts, white sneakers, minimal jewelry, no baseball caps, hair neat. The palette should sit quietly against the greenery, river and natural materials of the resort, not compete with it.
+      <ul>
+        <li>Bring a second outfit in case of rain or sweat.</li>
+        <li>Construction areas may need closed safety shoes and a hard hat. Pack them for walk-throughs.</li>
+        <li>Share these colors with April so you don't clash on screen. Avoid thin stripes and small checks, which flicker on camera.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>Gear checklist</h2>
+    <ul class="list check" id="gear"></ul>
+  </div>
+
+</div>
+
+<!-- PROPERTY FACTS -->
+<div class="panel" id="property" role="tabpanel" aria-labelledby="tab-property" hidden>
+  <div class="block">
+    <h2>Anahita at a glance</h2>
+    <p class="lede">From the IPA listings, updated 19 October 2026. The host can use these as prompts, but let April confirm numbers on camera.</p>
+    <div class="kv">
+      <div><span>Location</span><b>Babakan, Kuta Utara (Canggu area)</b></div>
+      <div><span>Prices from</span><b>$231,000</b></div>
+      <div><span>Unit type</span><b>1-bedroom suites, fully furnished</b></div>
+      <div><span>Ownership</span><b>25-year leasehold + 25-year extension, transferable on sale</b></div>
+      <div><span>Status</span><b>Under construction</b></div>
+      <div><span>Handover</span><b>March 2027 (tentative)</b></div>
+      <div><span>Guaranteed return</span><b>8% a year for the first 2 years, subject to programme terms</b></div>
+      <div><span>Owner perks</span><b>21 complimentary resort points a year</b></div>
+      <div><span>Payment</span><b>Flexible payment plans</b></div>
+      <div><span>Management</span><b>Professional hospitality operator</b></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>Resort features</h2>
+    <div class="cards">
+      <div class="card"><h3>Setting</h3><p>Beside a natural river and waterfall, surrounded by greenery and rice fields.</p></div>
+      <div class="card"><h3>Wellness club</h3><p>Open 24 hours, with a spa, hydrotherapy pools, sauna, cold plunge and oxygen therapy.</p></div>
+      <div class="card"><h3>In every suite</h3><p>Signature flower jacuzzi bath, open-plan living in natural materials, resort pool access.</p></div>
+      <div class="card"><h3>Dining</h3><p>On-site health-focused restaurant.</p></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>Available units</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Suite</th><th>Floor</th><th class="n">Size</th><th class="n">Price</th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="4">River Suites · private pool</td></tr>
+          <tr><td>River Suite</td><td>Ground</td><td class="n">68 m² (94 m² plot)</td><td class="n">$334,700</td></tr>
+          <tr><td>River Suite</td><td>Ground</td><td class="n">72 m² (94 m² plot)</td><td class="n">$344,400</td></tr>
+          <tr><td>River Suite</td><td>Ground</td><td class="n">110 m² (115 m² plot)</td><td class="n">$375,900</td></tr>
+          <tr class="grp"><td colspan="4">Deluxe Suites · resort pool access</td></tr>
+          <tr><td>Deluxe Suite</td><td>2nd</td><td class="n">57 m²</td><td class="n">$231,000</td></tr>
+          <tr><td>Deluxe Suite</td><td>2nd</td><td class="n">62 m²</td><td class="n">$236,000</td></tr>
+          <tr><td>Deluxe Suite</td><td>2nd</td><td class="n">69 m²</td><td class="n">$257,000</td></tr>
+          <tr><td>Deluxe Suite</td><td>2nd</td><td class="n">71 m²</td><td class="n">$267,000</td></tr>
+          <tr><td>Deluxe Suite</td><td>3rd</td><td class="n">57 m²</td><td class="n">$231,000</td></tr>
+          <tr><td>Deluxe Suite</td><td>3rd</td><td class="n">62 m²</td><td class="n">$236,000</td></tr>
+          <tr><td>Deluxe Suite</td><td>3rd</td><td class="n">71 m²</td><td class="n">$267,000</td></tr>
+          <tr class="grp"><td colspan="4">Sky Suites · top floor, resort pool access</td></tr>
+          <tr><td>Sky Suite</td><td>4th</td><td class="n">57 m²</td><td class="n">$231,000</td></tr>
+          <tr><td>Sky Suite</td><td>4th</td><td class="n">62 m²</td><td class="n">$236,000</td></tr>
+          <tr><td>Sky Suite</td><td>4th</td><td class="n">71 m²</td><td class="n">$288,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lede">Prices in USD, as listed on IPA. Availability can change as units are reserved.</p>
+  </div>
+
+  <div class="block">
+    <div class="note"><b>Say it right on camera.</b>
+      <ul>
+        <li>When the 8% return comes up, add "subject to programme terms."</li>
+        <li>Handover is "planned for March 2027," not a fixed date.</li>
+        <li>It's a leasehold, not freehold, for foreign buyers on these listings.</li>
+        <li>End with the call to action: get the brochure, prices and floorplans from International Property Alerts.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>Prepared for International Property Alerts. April's answers are her own views and are not legal, financial or investment advice. Property details come from IPA listings and may change.</footer>
+</div>
+
+<script>
+const sections = [
+  {t:"Cold open soundbites", p:true, why:"Short, punchy answers for the first 15 seconds of the video.", q:[
+    "In one sentence: is buying property in Bali a safe move?",
+    "What would you say to someone who's nervous about buying a home in a country they don't live in?",
+    "Why should a 30-something put money into Bali instead of a flat back home?"]},
+  {t:"April's story", p:true, why:"Builds trust. People buy from people.", q:[
+    "What brought you to Bali, and what made you go from visitor to developer?",
+    "Did you ever feel the same fear our viewers feel about investing abroad? How did you get past it?",
+    "Why did you name it Anahita? What does the name mean to you?",
+    "Who did you build Anahita for? Describe your ideal owner."]},
+  {t:"\"Is it too risky?\"", p:true, why:"Say the viewer's fear out loud, then let April answer it honestly.", q:[
+    "Let's be honest. What makes Bali property feel risky to foreigners?",
+    "What's the difference between a blind risk and a smart, calculated investment?",
+    "You've heard the horror stories. What usually went wrong in those cases?",
+    "What separates a trustworthy developer from a risky one?",
+    "How can someone in London, Sydney or Singapore check you out before sending any money?"]},
+  {t:"Ownership, made simple", p:true, cue:"25-year leasehold, extendable by 25 years, transferable if you sell.", q:[
+    "Why did you choose a leasehold structure, and why should a foreign buyer feel comfortable with it?",
+    "At year 25, how does the extension work? Is the price or process agreed in the contract today?",
+    "The lease is transferable if you sell. Who usually buys a resale unit, and how easy is that in Bali?",
+    "What paperwork does a buyer receive, and what should their own lawyer check?"]},
+  {t:"Protecting your money", p:true, cue:"Under construction. Handover planned for March 2027. Flexible payment plans.", q:[
+    "Anahita is still being built. How is a buyer's money protected during construction?",
+    "The payment plans are flexible. What does a typical schedule look like, and is it tied to building milestones?",
+    "Handover is planned for March 2027. What happens if it runs late?",
+    "How can overseas buyers follow the build without flying in?"]},
+  {t:"The numbers", p:true, cue:"From $231,000. 8% guaranteed return for 2 years, subject to programme terms. 21 resort points a year.", q:[
+    "Units come fully furnished. Beyond the price, what taxes, legal and setup costs should buyers budget for?",
+    "The programme offers an 8% guaranteed return for the first two years. Who backs that guarantee, and what are the terms?",
+    "What happens in year three, after the guarantee ends? What drives income from then on?",
+    "What yearly costs should owners plan for?",
+    "Owners get 21 resort points a year. What can they actually do with them? Can family or friends use them?"]},
+  {t:"Lifestyle meets investment", why:"Our viewers spend on surfing, diving, wellness and travel. Connect the property to that life.", q:[
+    "Many of our viewers surf, dive or travel a lot. How does owning here fit that lifestyle?",
+    "Can an owner stay a few weeks a year and rent it out the rest? How does that work?",
+    "Why build a 24-hour wellness club with cold plunge, sauna and oxygen therapy? Does it help the units rent better?",
+    "Why one-bedroom suites? Who is renting them?",
+    "River Suite with a private pool, or Sky Suite on the top floor: which would you pick for living, and which for renting?"]},
+  {t:"Why Bali, why Babakan", q:[
+    "Why Bali over Phuket, Dubai or Lisbon for a millennial investor?",
+    "Some say Bali is overbuilt. What's your answer?",
+    "Why Babakan instead of central Canggu?",
+    "Where do you see this area in 5 to 10 years?"]},
+  {t:"Challenges and change", q:[
+    "What was the hardest part of building Anahita?",
+    "How have new rules on permits and villa rentals changed things for buyers?",
+    "How have buyers changed? Are they getting younger?",
+    "What's one mistake you made that you'd warn others about?"]},
+  {t:"Why IPA", p:true, why:"The turn to confidence: buying abroad is safer with the right partners.", q:[
+    "Why did you choose to work with International Property Alerts?",
+    "What does IPA do for buyers that's hard to do alone from overseas?",
+    "How do you and IPA work together to make the process feel clear and safe?",
+    "For someone watching who's curious but still nervous, what's the very first step?"]},
+  {t:"Close", p:true, q:[
+    "If your best friend asked, \"Should I buy in Bali?\", what would you tell them?",
+    "Who is Anahita not right for?",
+    "Finish this sentence: \"Buying in Bali is a smart move when…\"",
+    "What do you want viewers to do after watching this?"]}
+];
+
+const prep = [
+  ["Confirm call time and location with April","Then update this page"],
+  ["Send April the topic list a few days early","Topics only, so her answers stay natural"],
+  ["Ask April which numbers she's happy to say on camera","Prices, the 8% guarantee terms, handover date"],
+  ["Get talent release forms signed","April, the host, and anyone else on camera"],
+  ["Confirm filming permission on site","Plus the site manager's contact and safety rules"],
+  ["Check drone permission","With the site and local rules, before flying"],
+  ["Get IPA and Anahita logos and renders","For overlays and edit"],
+  ["Plan an indoor backup spot","In case of rain"]
+];
+const shots = [
+  ["River and waterfall","The resort's signature setting. Best at sunrise."],
+  ["Signature flower jacuzzi bath","Close-ups and a slow reveal"],
+  ["River Suite private pool","Show indoor-outdoor living"],
+  ["Sky Suite view from the 4th floor","Wide shot of greenery and rice fields"],
+  ["Wellness club","Spa, hydrotherapy, sauna, cold plunge, if ready to film"],
+  ["Construction progress","Builds trust. Shows the project is real and moving."],
+  ["April walking the site","Walk-and-talk, pointing out features"],
+  ["April with plans, renders or a model","Hands and details"],
+  ["Babakan surroundings","Rice fields, village life, quiet roads"],
+  ["Canggu lifestyle","Beach, surf, cafés, sunset"],
+  ["Host intro and outro to camera","With IPA call to action at the end"]
+];
+const gear = [
+  ["Main camera and second camera","Two angles for the interview"],
+  ["2 wireless lav mics + backup recorder",""],
+  ["Spare batteries and memory cards",""],
+  ["Tripods, gimbal, and slider",""],
+  ["Reflector and diffuser",""],
+  ["Portable LED light","For indoor suite shots"],
+  ["Drone","Only with permission"],
+  ["Rain covers and umbrellas",""],
+  ["Hard hats and safety shoes","For construction areas"],
+  ["Water, snacks, insect repellent, sunscreen",""],
+  ["Printed or phone copy of this run sheet",""]
+];
+
+const KEY="anahita-run-v2";
+let done=new Set();
+try{done=new Set(JSON.parse(localStorage.getItem(KEY)||"[]"))}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify([...done]))}catch(e){}};
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+
+function item(key,html,numLabel){
+  const li=document.createElement("li");
+  li.className="q"+(done.has(key)?" done":""); li.tabIndex=0; li.dataset.key=key;
+  li.setAttribute("role","checkbox"); li.setAttribute("aria-checked",done.has(key));
+  li.innerHTML=(numLabel?`<span class="num">${numLabel}</span>`:"")+`<span class="txt">${html}</span><span class="tick" aria-hidden="true"></span>`;
+  return li;
+}
+
+const list=document.getElementById("list"), jump=document.getElementById("jump");
+let n=0;
+sections.forEach((s,i)=>{
+  const id="s"+(i+1);
+  const sec=document.createElement("section");
+  sec.className="qs"; sec.id=id; if(s.p) sec.dataset.priority="1";
+  sec.innerHTML=`<div class="sh"><h2>${esc(s.t)}</h2>${s.p?'<span class="chip">Priority</span>':''}</div>`+
+    (s.why?`<p class="why">${esc(s.why)}</p>`:'')+(s.cue?`<p class="cue"><b>Host cue</b>${esc(s.cue)}</p>`:'');
+  const ol=document.createElement("ol"); ol.className="list";
+  s.q.forEach(q=>{n++; ol.appendChild(item("q"+n,esc(q)))});
+  sec.appendChild(ol); list.appendChild(sec);
+  const o=document.createElement("option"); o.value=id; o.textContent=`${s.t}${s.p?" ★":""}`; jump.appendChild(o);
+});
+function fill(elId,arr,prefix){const ul=document.getElementById(elId);arr.forEach(([a,b],i)=>ul.appendChild(item(prefix+i,esc(a)+(b?`<small>${esc(b)}</small>`:""))))}
+fill("gear",gear,"g");
+
+const countEl=document.getElementById("count");
+function updateCount(){const all=[...document.querySelectorAll("#list .q")];countEl.textContent=`${all.filter(li=>li.classList.contains("done")).length} of ${all.length} asked`}
+updateCount();
+
+function toggle(li){
+  if(window.getSelection && String(window.getSelection()).length) return;
+  const k=li.dataset.key;
+  done.has(k)?done.delete(k):done.add(k);
+  li.classList.toggle("done"); li.setAttribute("aria-checked",done.has(k));
+  save(); updateCount();
+}
+document.addEventListener("click",e=>{const li=e.target.closest(".q"); if(li) toggle(li)});
+document.addEventListener("keydown",e=>{const li=e.target.closest&&e.target.closest(".q"); if(li&&(e.key===" "||e.key==="Enter")){e.preventDefault();toggle(li)}});
+
+jump.addEventListener("change",()=>{const el=document.getElementById(jump.value); if(el) el.scrollIntoView(); jump.value=""});
+const prio=document.getElementById("prio");
+prio.addEventListener("click",()=>{const on=prio.getAttribute("aria-pressed")!=="true";prio.setAttribute("aria-pressed",on);document.body.classList.toggle("priority",on)});
+document.getElementById("reset").addEventListener("click",function(){
+  if(this.dataset.confirm){
+    document.querySelectorAll("#list .q.done").forEach(li=>{done.delete(li.dataset.key);li.classList.remove("done");li.setAttribute("aria-checked","false")});
+    save();updateCount();this.textContent="Clear ticks";delete this.dataset.confirm}
+  else{this.dataset.confirm="1";this.textContent="Tap again to clear";setTimeout(()=>{this.textContent="Clear ticks";delete this.dataset.confirm},3000)}
+});
+
+/* Tabs */
+const tabs=[...document.querySelectorAll(".tab")];
+function show(id,push){
+  tabs.forEach(t=>{const on=t.getAttribute("aria-controls")===id;t.setAttribute("aria-selected",on);document.getElementById(t.getAttribute("aria-controls")).hidden=!on});
+  try{localStorage.setItem(KEY+"-tab",id)}catch(e){}
+  if(push){window.scrollTo({top:document.querySelector(".tabs").offsetTop-0});}
+}
+tabs.forEach(t=>t.addEventListener("click",()=>show(t.getAttribute("aria-controls"),true)));
+const fromHash=(location.hash||"").slice(1);
+let start="questions";
+if(["questions","shoot","property"].includes(fromHash)) start=fromHash;
+else{try{const s=localStorage.getItem(KEY+"-tab"); if(s) start=s}catch(e){}}
+show(start,false);
+</script>
+
+</body></html>
